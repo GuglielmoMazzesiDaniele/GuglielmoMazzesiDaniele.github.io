@@ -5,55 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="scripts/constants.js"></script>
+    <script src="script.js"></script>
 </head>
-<body>
-<header>
-    <nav>
-        <h1><a href="#">My Portfolio</a></h1>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+<body onload="loadHomepage()">
+<div style="grid-column: 2">
+    <header>
+        <h1>This is a title</h1>
+    </header>
+    <nav id="nav_bar">
     </nav>
-</header>
-
-<main>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            Hi! I'm a bachelor's student in Informatics. I have a passion for web development, data science, and software engineering.
-            Below, you'll find some of my key projects and ways to connect with me.
-        </p>
-    </section>
-
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="projects-grid">
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>A short description of Project 1.</p>
-                <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
-            </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>A short description of Project 2.</p>
-                <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
-    </section>
-</main>
-
-<footer>
-    <p>&copy; 2025 Your Name. All rights reserved.</p>
-</footer>
-
-<script src="script.js"></script>
+</div>
 </body>
 </html>
