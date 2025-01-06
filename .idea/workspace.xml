@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7ee3942-74bb-46f2-8394-e9adb925156d" name="Changes" comment="First commit :D">
-      <change afterPath="$PROJECT_DIR$/scripts/constants.js" afterDir="false" />
+    <list default="true" id="f7ee3942-74bb-46f2-8394-e9adb925156d" name="Changes" comment="Started working on the webpage.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
@@ -79,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1736165343774</updated>
       <workItem from="1736165344926" duration="1968000" />
-      <workItem from="1736185303114" duration="2003000" />
+      <workItem from="1736185303114" duration="4836000" />
     </task>
     <task id="LOCAL-00001" summary="First commit :D">
       <option name="closed" value="true" />
@@ -97,7 +96,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736185388125</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Started working on the webpage.">
+      <option name="closed" value="true" />
+      <created>1736187338693</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1736187338693</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +112,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit :D" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit :D" />
+    <MESSAGE value="Started working on the webpage." />
+    <option name="LAST_COMMIT_MESSAGE" value="Started working on the webpage." />
   </component>
 </project>
