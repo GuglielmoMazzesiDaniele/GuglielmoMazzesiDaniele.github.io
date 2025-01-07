@@ -4,7 +4,7 @@
 
 body {
     display: grid;
-    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-columns: 1fr 15fr 1fr;
     grid-template-rows: auto;
 }
 
@@ -16,9 +16,16 @@ header {
 
 main {
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    height: 80vh;
+    grid-template-columns: 1fr 4fr;
+    height: 90vh;
     width: auto;
+}
+
+main .sub-container {
+    opacity: 0.75;
+    border: 0.25em solid black;
+    border-radius: 0.5em;
+    margin : 5px;
 }
 
 nav {
@@ -37,4 +44,9 @@ nav button {
     width: 90%;
     height: 5%;
     font-size: 1.25em;
+}
+
+nav button:hover {
+    cursor: pointer;
+    filter: brightness(85%);
 }
