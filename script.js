@@ -1,4 +1,4 @@
-let nav_buttons = [
+let interactive_nav_buttons = [
     {
         text: "Home",
         container_id: "home",
@@ -14,7 +14,7 @@ let nav_buttons = [
 // Loads the content of the homepage dynamically on load
 function loadHomepage() {
     // Loading the buttons
-    nav_buttons.forEach((element) => {
+    interactive_nav_buttons.forEach((element) => {
         // Querying the DOM for the navbar
         let nav_bar = document.querySelector("nav");
         // Creating a new button

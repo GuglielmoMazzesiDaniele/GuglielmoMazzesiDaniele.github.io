@@ -63,7 +63,8 @@ nav button:hover {
     display: flex;
     flex-direction: column;
     align-content: center;
-    text-align: center
+    text-align: center;
+    overflow: scroll;
 }
 
 #projects {
@@ -71,4 +72,12 @@ nav button:hover {
     flex-direction: column;
     align-content: center;
     text-align: center;
+}
+
+#projects_list {
+
+}
+
+#project_card {
+
 }
