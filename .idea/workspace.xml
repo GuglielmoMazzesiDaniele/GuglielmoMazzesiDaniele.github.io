@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7ee3942-74bb-46f2-8394-e9adb925156d" name="Changes" comment="Increased background randomness, started working on the main layout.">
+    <list default="true" id="f7ee3942-74bb-46f2-8394-e9adb925156d" name="Changes" comment="Implemented user interactions with the background.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/background.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +79,7 @@
       <updated>1736165343774</updated>
       <workItem from="1736165344926" duration="1968000" />
       <workItem from="1736185303114" duration="6696000" />
-      <workItem from="1736245426032" duration="18504000" />
+      <workItem from="1736245426032" duration="23272000" />
     </task>
     <task id="LOCAL-00001" summary="First commit :D">
       <option name="closed" value="true" />
@@ -136,7 +137,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736263901878</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Implemented user interactions with the background.">
+      <option name="closed" value="true" />
+      <created>1736270903148</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1736270903149</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +157,7 @@
     <MESSAGE value="Background" />
     <MESSAGE value="Animated background." />
     <MESSAGE value="Increased background randomness, started working on the main layout." />
-    <option name="LAST_COMMIT_MESSAGE" value="Increased background randomness, started working on the main layout." />
+    <MESSAGE value="Implemented user interactions with the background." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented user interactions with the background." />
   </component>
 </project>

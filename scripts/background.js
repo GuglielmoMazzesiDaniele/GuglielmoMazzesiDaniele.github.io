@@ -1,6 +1,11 @@
 // Global variables
 let background_canvas
 
+// Initializing variables used by the Perlin Noise
+let noise_scale = 0.002;
+let sea_movement = 200;
+let sea_level;
+
 // Global variables for the floating circles background
 let maximum_circles = 15;
 let respawn_probability = 0.25;
@@ -40,16 +45,14 @@ function draw_background() {
         document.body.style.userSelect = 'none';
     }
 
+    // Setting the sea level
+    sea_level = windowHeight / 2;
+
     // Resetting the background
     background(255);
 
-    // Initializing variables used by the Perlin Noise
-    let noise_scale = 0.002;
-    let sea_movement = 200;
-    let sea_level = windowHeight / 2;
-
-    drawFloatingCircles(noise_scale, sea_movement, sea_level);
-    drawSea(noise_scale, sea_movement, sea_level);
+    drawFloatingCircles();
+    drawSea();
 }
 
 // Verify if a floating circle has been grabbed
@@ -65,16 +68,41 @@ function mousePressed_background() {
 
 // Verify if a floating circle has been released
 function mouseReleased_background() {
+    is_grabbing = false;
     floating_circles.forEach(floating_circle => {
-        floating_circle.is_grabbed = false;
-        is_grabbing = false;
+        if(floating_circle.is_grabbed){
+            floating_circle.is_grabbed = false;
+            floating_circle.x = mouseX;
+        }
     })
 }
 
 // Draw the circles floating on the background sea
-function drawFloatingCircles (noise_scale, sea_movement, sea_level) {
+function drawFloatingCircles () {
     // Drawing every
     floating_circles.forEach((floating_circle, index) => {
+        // Setting the circle's brush
+        noStroke();
+        fill(floating_circle.c);
+
+        // If the circle has been grabbed, draw it at mouse coordinates
+        if(floating_circle.is_grabbed){
+            // Drawing the circle at mouse position
+            circle(mouseX, mouseY, floating_circle.d);
+
+            // Computing the circle y coordinates at sea level
+            let sea_y = sea_level - floating_circle.d / 3
+                - sea_movement * noise(mouseX * noise_scale, frameCount * noise_scale);
+
+            // Setting the circle projection's brush
+            fill(floating_circle.p_c);
+
+            // Drawing another circle, with increased opacity, at the grabbed circle's sea level
+            circle(mouseX, sea_y, floating_circle.d);
+
+            return;
+        }
+
         // Increasing the circle_x
         if(frameCount % 2 === 0)
             floating_circle.x++;
@@ -85,16 +113,6 @@ function drawFloatingCircles (noise_scale, sea_movement, sea_level) {
                 floating_circle.x = -20
             else
                 floating_circles.splice(index, 1);
-        }
-
-        // Setting the circle's brush
-        stroke(floating_circle.c);
-        fill(floating_circle.c);
-
-        // If the circle has been grabbed, draw it at mouse coordinates
-        if(floating_circle.is_grabbed){
-            circle(mouseX, mouseY, floating_circle.d);
-            return;
         }
 
         // Computing the circle y coordinates
@@ -132,19 +150,21 @@ function spawnFloatingCircles () {
         // Generating the diameter and color
         let diameter = 10 + 50 * Math.random();
         let circle_color = color(0, 0 , 0, 220);
+        let projection_color = color(255, 0, 0, 100);
 
         floating_circles.push({
             x : - 10 - diameter,
             y : 0,
             d : diameter,
             c : circle_color,
+            p_c: projection_color,
             is_grabbed: false
         })
     }
 }
 
 // Draw the background sea
-function drawSea (noise_scale, sea_movement, sea_level) {
+function drawSea () {
     // Creating the sea
     for(let x = 0; x < windowWidth; x++) {
         // Scaling the width coordinates by the noise variables

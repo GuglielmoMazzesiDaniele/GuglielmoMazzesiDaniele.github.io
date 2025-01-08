@@ -28,6 +28,14 @@ main .sub-container {
     margin : 5px;
 }
 
+main div {
+    grid-column: 2;
+}
+
+main nav {
+    grid-column: 1;
+}
+
 nav {
     display: flex;
     flex-direction: column;
