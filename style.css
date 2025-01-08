@@ -58,3 +58,17 @@ nav button:hover {
     cursor: pointer;
     filter: brightness(85%);
 }
+
+#home {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center
+}
+
+#projects {
+    display: none;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+}

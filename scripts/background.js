@@ -46,7 +46,7 @@ function draw_background() {
     }
 
     // Setting the sea level
-    sea_level = windowHeight / 2;
+    sea_level = 2 *  windowHeight / 3;
 
     // Resetting the background
     background(255);

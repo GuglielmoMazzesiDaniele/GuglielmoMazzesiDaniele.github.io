@@ -1,15 +1,41 @@
-let nav_button = [
-    "Home",
-    "Projects",
-    "Curriculum Vitae",
+let nav_buttons = [
+    {
+        text: "Home",
+        container_id: "home",
+        button: null
+    },
+    {
+        text: "Projects",
+        container_id: "projects",
+        button: null
+    },
 ]
 
 // Loads the content of the homepage dynamically on load
 function loadHomepage() {
-    nav_button.forEach((element) => {
+    // Loading the buttons
+    nav_buttons.forEach((element) => {
+        // Querying the DOM for the navbar
         let nav_bar = document.querySelector("nav");
+        // Creating a new button
         let button = document.createElement("button");
-        button.textContent = element;
+        // Filling the button with the text
+        button.textContent = element.text;
+        // Creating the button listener
+        button.addEventListener("click", function(event) {
+            // Preventing default behaviour
+            event.preventDefault();
+            // Hiding all the main containers
+            document.querySelectorAll("main div").forEach((element) => {
+                element.style.display = "none";
+            })
+            console.log(element.container_id)
+            // Showing the container linked with the button
+            document.getElementById(element.container_id).style.display = "flex";
+        }.bind(this));
+
+        // Saving a reference to the button and appending it in the navbar
+        element.button = button;
         nav_bar.appendChild(button);
     })
 }
