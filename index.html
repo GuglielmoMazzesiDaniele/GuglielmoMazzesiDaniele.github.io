@@ -10,6 +10,7 @@
     <!-- SCRIPTS -->
     <script src="script.js"></script>
     <script src="scripts/background.js"></script>
+    <script src="scripts/navbar.js"></script>
 
     <!-- EXTERNAL LIBRARIES OR CONTENT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +27,7 @@
             <nav class="sub-container"></nav>
             <div id="home_container" class="sub-container">
                 <h2>Hello there!</h2>
-                <p>
+                <p style="font-size: 1.15em">
                     My name is Guglielmo Daniele Mazzesi (but everybody calls me Guglio), and I created this website to
                     highlight my work and passion for programming.
                     <br/>
@@ -38,11 +39,38 @@
                 </p>
             </div>
             <div id="projects_container" class="sub-container">
-                <h2>Project's List</h2>
+                <h2>My projects!</h2>
+                <div>List of buttons</div>
                 <div id="projects_list">
                     <div class="project_card">
-                        <h3 style="grid-area: title; background: green">This is a card title!</h3>
-                        <div style="grid-area: content; background: yellow">
+                        <h3 style="grid-area: title">Ray Tracer</h3>
+                        <div style="grid-area: content" class="project_card_content">
+                            <div style="grid-area: description">
+                                DESCRIPTION
+                            </div>
+                            <div style="grid-area: link">
+                                LINK
+                            </div>
+                            <div style="grid-area: image">
+                                <img style="border-radius: 5px" alt="test_image" src="https://picsum.photos/750">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project_card">
+                        <h3 style="grid-area: title">Ray Tracer</h3>
+                        <div style="grid-area: content">
+                            This is a card content
+                        </div>
+                    </div>
+                    <div class="project_card">
+                        <h3 style="grid-area: title">Ray Tracer</h3>
+                        <div style="grid-area: content">
+                            This is a card content
+                        </div>
+                    </div>
+                    <div class="project_card">
+                        <h3 style="grid-area: title">Ray Tracer</h3>
+                        <div style="grid-area: content">
                             This is a card content
                         </div>
                     </div>
