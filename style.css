@@ -2,6 +2,18 @@
     font-family: "Funnel Sans", serif;
 }
 
+h1 {
+    font-size: 2.5rem
+}
+
+h2 {
+    font-size: 2.125rem
+}
+
+h3 {
+    font-size: 1.875rem
+}
+
 body {
     display: grid;
     grid-template-columns: 1fr 15fr 1fr;
@@ -59,25 +71,35 @@ nav button:hover {
     filter: brightness(85%);
 }
 
-#home {
+#home_container {
     display: flex;
     flex-direction: column;
     align-content: center;
     text-align: center;
-    overflow: scroll;
 }
 
-#projects {
-    display: none;
+#projects_container {
+    padding: 1em;
+    display: flex;
     flex-direction: column;
-    align-content: center;
-    text-align: center;
+    align-items: center;
 }
 
 #projects_list {
-
+    width: 100%;
+    max-height: 75vh;
+    grid-column: 2;
+    display: flex;
+    background: orange;
+    flex-direction: column;
+    overflow: auto;
 }
 
-#project_card {
-
+.project_card {
+    display: grid;
+    padding: 1em;
+    grid-template:
+    [h3-left] ". . title . ." 1fr [h3-right]
+    [div-left] ". content content content ." 5fr [div-right]
+    / 0.5fr 1fr 2fr 1fr 0.5fr;
 }
