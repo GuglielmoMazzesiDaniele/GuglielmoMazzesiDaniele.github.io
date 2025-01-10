@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7ee3942-74bb-46f2-8394-e9adb925156d" name="Changes" comment="Started stylization of projects card.">
-      <change afterPath="$PROJECT_DIR$/scripts/navbar.js" afterDir="false" />
+    <list default="true" id="f7ee3942-74bb-46f2-8394-e9adb925156d" name="Changes" comment="Created the first actual card.">
+      <change afterPath="$PROJECT_DIR$/images/Ray Tracer.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,6 +62,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mazze\Desktop\Portfolio\images" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -82,7 +86,8 @@
       <workItem from="1736185303114" duration="6696000" />
       <workItem from="1736245426032" duration="31745000" />
       <workItem from="1736422103870" duration="10735000" />
-      <workItem from="1736443539389" duration="6030000" />
+      <workItem from="1736443539389" duration="8911000" />
+      <workItem from="1736496117095" duration="10773000" />
     </task>
     <task id="LOCAL-00001" summary="First commit :D">
       <option name="closed" value="true" />
@@ -180,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736429035745</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Started stylization of projects card.">
+      <option name="closed" value="true" />
+      <created>1736450499897</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1736450499897</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +211,7 @@
     <MESSAGE value="Small changes, started implementing project card." />
     <MESSAGE value="Implemented a basic card." />
     <MESSAGE value="Started stylization of projects card." />
-    <option name="LAST_COMMIT_MESSAGE" value="Started stylization of projects card." />
+    <MESSAGE value="Created the first actual card." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created the first actual card." />
   </component>
 </project>
