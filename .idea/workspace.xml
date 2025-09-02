@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7ee3942-74bb-46f2-8394-e9adb925156d" name="Changes" comment="Added a new project card, YAAARP.">
-      <change afterPath="$PROJECT_DIR$/images/YAAARP.PNG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +97,8 @@
       <workItem from="1738232319866" duration="7231000" />
       <workItem from="1738316865727" duration="469000" />
       <workItem from="1738320841823" duration="4228000" />
-      <workItem from="1738749199761" duration="629000" />
+      <workItem from="1738749199761" duration="688000" />
+      <workItem from="1740474062652" duration="1795000" />
     </task>
     <task id="LOCAL-00001" summary="First commit :D">
       <option name="closed" value="true" />
@@ -214,7 +212,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736535840319</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added a new project card, YAAARP.">
+      <option name="closed" value="true" />
+      <created>1738755426863</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1738755426863</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
