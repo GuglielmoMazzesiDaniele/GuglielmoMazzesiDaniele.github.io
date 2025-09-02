@@ -1,75 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guglielmo's Portfolio</title>
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guglielmo's Portfolio</title>
 
-    <!-- SCRIPTS -->
-    <script src="script.js"></script>
-    <script src="scripts/background.js"></script>
-    <script src="scripts/navbar.js"></script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
-    <!-- EXTERNAL LIBRARIES OR CONTENT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- p5 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+
+  <!-- App scripts -->
+  <script defer src="scripts/background.js"></script>
+  <script defer src="scripts/navbar.js"></script>
+  <script defer src="scripts/script.js"></script>
 </head>
-<body onload="loadHomepage()">
-    <div style="grid-column: 2">
-        <header>
-            <h1>Guglielmo Mazzesi's Portfolio</h1>
-        </header>
-        <main>
-            <nav class="sub-container"></nav>
-            <div id="home_container" class="sub-container">
-                <h2>Hello there!</h2>
-                <p style="font-size: 1.15em">
-                    My name is Guglielmo Daniele Mazzesi (but everybody calls me Guglio), and I created this website to
-                    highlight my work and passion for programming.
-                    <br/>
-                    My primary professional interests include Computer Graphics, Low-Level Programming, Web Development,
-                    and Game Development.
-                    <br/>
-                    As of January 8th, 2025, I am pursuing a Bachelor's degree in Informatics at
-                    <a href="https://www.usi.ch/en/education/bachelor/informatics">USI</a>.
-                </p>
+<body>
+  <a class="skip-link" href="#home">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="siteNav">
+      <span class="sr-only">Toggle navigation</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true" width="24" height="24">
+        <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <h1 class="site-title">Guglielmo Mazzesi's Portfolio</h1>
+  </header>
+
+  <nav id="siteNav" class="site-nav" role="navigation" aria-label="Primary">
+    <ul>
+      <li><a class="nav-link" href="#home">Home</a></li>
+      <li><a class="nav-link" href="#projects">Projects</a></li>
+    </ul>
+  </nav>
+
+  <main id="content" class="content" role="main">
+    <section id="home" class="panel" aria-labelledby="home-title">
+      <div class="card">
+        <h2 id="home-title">Hello there!</h2>
+        <p class="lead">
+          My name is <strong>Guglielmo Daniele Mazzesi</strong> (but everybody calls me <em>Guglio</em>), and I created this website to highlight my work and passion for programming.
+        </p>
+        <p>
+          My primary professional interests include <strong>Computer Graphics</strong>, <strong>Low‑Level Programming</strong>, <strong>Web Development</strong>, and <strong>Game Development</strong>.
+        </p>
+        <p>
+          As of January 8th, 2025, I am pursuing a Bachelor's degree in Informatics at
+          <a target="_blank" rel="noreferrer noopener" href="https://www.usi.ch/en/education/bachelor/informatics">USI</a>.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="panel" aria-labelledby="projects-title">
+      <div class="card">
+        <h2 id="projects-title">My projects</h2>
+        <div class="projects-grid">
+
+          <article class="project">
+            <img class="project-img" src="images/Ray%20Tracer.png" alt="Screenshot of my C++ Ray Tracer output" width="640" height="360" loading="lazy">
+            <div class="project-body">
+              <h3 class="project-title">Ray Tracer</h3>
+              <p>
+                During my Bachelor's program I developed a ray tracer from scratch, using only C++ and the
+                OpenGL Mathematics (GLM) library.
+                My submission for the 4th USI Rendering Competition won first place! 🏆
+              </p>
+              <p class="project-links">
+                <a class="btn" href="https://github.com/GuglielmoMazzesiDaniele/RayTracer" target="_blank" rel="noreferrer">Repo</a>
+              </p>
             </div>
-            <div id="projects_container" class="sub-container">
-                <h2>My projects!</h2>
-                <div id="projects_list">
-                    <div class="project_card">
-                        <img style="border-radius: 5px; grid-area: image" alt="ray_tracer" src="images/Ray%20Tracer.png" width="250">
-                        <h3 style="grid-area:title; margin: 0; padding: 0">Ray Tracer</h3>
-                        <p style="grid-area: description; margin: 0; padding: 0">
-                            During my Bachelor's program I developed a ray tracer from scratch, using only C++ and the
-                            OpenGL Mathematics (GLM) library.
-                            <br>
-                            My submission for the 4th USI Rendering Competition won first place! &#127942;
-                        </p>
-                        <div style="grid-area: links">
-                            <a href="https://github.com/GuglielmoMazzesiDaniele/RayTracer" target="_blank">Repo</a>
-                        </div>
-                    </div>
-                    <div class="project_card">
-                        <img style="border-radius: 5px; grid-area: image" alt="yaaarp" src="images/YAAARP.PNG" width="250">
-                        <h3 style="grid-area:title; margin: 0; padding: 0">YAAARP</h3>
-                        <p style="grid-area: description; margin: 0; padding: 0">
-                            During my Bachelor's Program I developed a simple ascii based action rpg, using the Java's
-                            Swing library.
-                            <br>
-                            This project was called YAAARP (Yet Another Ascii ARPG).
-                        </p>
-                        <div style="grid-area: links">
-                            <a href="https://gitlab.com/GuglielmoMazzesiDaniele/yaaarp" target="_blank">Repo</a>
-                        </div>
-                    </div>
-                </div>
+          </article>
+
+          <article class="project">
+            <img class="project-img" src="images/YAAARP.PNG" alt="Screenshot from the ASCII ARPG YAAARP built with Java Swing" width="640" height="360" loading="lazy">
+            <div class="project-body">
+              <h3 class="project-title">YAAARP</h3>
+              <p>
+                During my Bachelor's Program I developed a simple ASCII‑based action RPG using Java's
+                Swing library. The project is named YAAARP (Yet Another ASCII ARPG).
+              </p>
+              <p class="project-links">
+                <a class="btn" href="https://gitlab.com/GuglielmoMazzesiDaniele/yaaarp" target="_blank" rel="noreferrer">Repo</a>
+              </p>
             </div>
-        </main>
-    </div>
+          </article>
+
+          <article class="project">
+            <img class="project-img" src="images/YAAARP.PNG" alt="Screenshot from the ASCII ARPG YAAARP built with Java Swing" width="640" height="360" loading="lazy">
+            <div class="project-body">
+              <h3 class="project-title">YAAARP</h3>
+              <p>
+                During my Bachelor's Program I developed a simple ASCII‑based action RPG using Java's
+                Swing library. The project is named YAAARP (Yet Another ASCII ARPG).
+              </p>
+              <p class="project-links">
+                <a class="btn" href="https://gitlab.com/GuglielmoMazzesiDaniele/yaaarp" target="_blank" rel="noreferrer">Repo</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="project">
+            <img class="project-img" src="images/YAAARP.PNG" alt="Screenshot from the ASCII ARPG YAAARP built with Java Swing" width="640" height="360" loading="lazy">
+            <div class="project-body">
+              <h3 class="project-title">YAAARP</h3>
+              <p>
+                During my Bachelor's Program I developed a simple ASCII‑based action RPG using Java's
+                Swing library. The project is named YAAARP (Yet Another ASCII ARPG).
+              </p>
+              <p class="project-links">
+                <a class="btn" href="https://gitlab.com/GuglielmoMazzesiDaniele/yaaarp" target="_blank" rel="noreferrer">Repo</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="project">
+            <img class="project-img" src="images/YAAARP.PNG" alt="Screenshot from the ASCII ARPG YAAARP built with Java Swing" width="640" height="360" loading="lazy">
+            <div class="project-body">
+              <h3 class="project-title">YAAARP</h3>
+              <p>
+                During my Bachelor's Program I developed a simple ASCII‑based action RPG using Java's
+                Swing library. The project is named YAAARP (Yet Another ASCII ARPG).
+              </p>
+              <p class="project-links">
+                <a class="btn" href="https://gitlab.com/GuglielmoMazzesiDaniele/yaaarp" target="_blank" rel="noreferrer">Repo</a>
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <p>© <span id="year"></span> Guglielmo Mazzesi</p>
+  </footer>
 </body>
 </html>

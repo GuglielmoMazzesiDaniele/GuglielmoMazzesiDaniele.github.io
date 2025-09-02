@@ -1,47 +1,31 @@
-// Main containers
-let main_containers = [
-    {
-        text: "Home",
-        container_id: "home_container",
-        container: null,
-        button: null
-    },
-    {
-        text: "Projects",
-        container_id: "projects_container",
-        container: null,
-        button: null
-    },
-]
+// Simple in-page nav: highlights current section and supports a mobile toggle
+(function(){
+  const navToggle = document.getElementById('navToggle');
+  const siteNav = document.getElementById('siteNav');
+  const links = [...document.querySelectorAll('.nav-link')];
 
-function loadNavBar() {
-    // Creating the main containers logics
-    main_containers.forEach((container) => {
-        // Querying the DOM for the navbar
-        let nav_bar = document.querySelector("nav");
-        // Querying the DOM for the container
-        container.container = document.getElementById(container.container_id);
-        // Removing the container from the DOM unless it is the homepage
-        if(container.container_id !== "home_container")
-            container.container.remove();
-        // Creating a new button
-        let button = document.createElement("button");
-        // Saving a reference to the button and appending it in the navbar
-        container.button = button;
-        nav_bar.appendChild(button);
-        // Filling the button with the text
-        button.textContent = container.text;
-        // Creating the button listener
-        button.addEventListener("click", function(event) {
-            // Preventing default behaviour
-            event.preventDefault()
-            // Hiding all the main containers
-            main_containers.forEach((container) => {
-                container.container.remove();
-            })
-            // Pushing the correct container in the DOM
-            document.querySelector("main").appendChild(container.container);
-            console.log(container.container);
-        }.bind(this));
-    })
-}
+  // Toggle mobile nav
+  navToggle?.addEventListener('click', () => {
+    const open = document.body.classList.toggle('nav-open');
+    navToggle.setAttribute('aria-expanded', String(open));
+  });
+
+  // Close nav when navigating
+  links.forEach(link => link.addEventListener('click', () => {
+    document.body.classList.remove('nav-open');
+    navToggle?.setAttribute('aria-expanded', 'false');
+  }));
+
+  // Observe sections for aria-current
+  const sections = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        const id = '#'+entry.target.id;
+        links.forEach(a => a.setAttribute('aria-current', a.getAttribute('href')===id ? 'page' : null));
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px', threshold: 0.01 });
+  sections.forEach(s => io.observe(s));
+
+})();
