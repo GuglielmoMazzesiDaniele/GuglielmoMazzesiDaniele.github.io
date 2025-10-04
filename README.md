@@ -1,3 +1,3 @@
-# GuglielmoMazzesiDaniele.github.io
+# Guglielmo Mazzesi Portfolio
 
-TEST TEST
+This repository is used as a GitHub Page for hosting my portofolio.
