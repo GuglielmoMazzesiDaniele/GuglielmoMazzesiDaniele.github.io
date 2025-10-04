@@ -1,3 +1,3 @@
 # Guglielmo Mazzesi Portfolio
 
-This repository is used as a GitHub Page for hosting my portofolio.
+This repository is used as a GitHub Page for hosting my portfolio.
